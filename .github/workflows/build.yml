@@ -22,7 +22,7 @@ jobs:
       - name: Extract version from __about__.py
         id: get_version
         run: |
-          version=$(grep -oP '(?<=__version__ = ")[^"]*' src/fastauth/__about__.py)
+          version=$(grep -oP '(?<=__version__ = ")[^"]*' __about__.py)
           echo "Extracted version: $version" # Log the extracted version
           echo "VERSION=$version" >> $GITHUB_ENV
 
